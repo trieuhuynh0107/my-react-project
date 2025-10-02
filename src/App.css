@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.colorful-bg {
   min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 55%, #a1c4fd 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.App-header {
+  background: transparent;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+}
+
+.rainbow-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #50c9c3, #f9d423, #24fe41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.colorful-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.btn-pink {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  color: #fff;
+}
+.btn-blue {
+  background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+  color: #fff;
+}
+.btn-yellow {
+  background: linear-gradient(90deg, #f9d423, #fffc00);
+  color: #333;
+}
+.btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 300px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin: 1rem 0;
+  text-align: left;
+}
+.card-gradient {
+  background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+  color: #fff;
+}
+.card-solid {
+  background: #24fe41;
+  color: #222;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #333;
+  background: rgba(255,255,255,0.7);
+  border-top: 2px solid #fad0c4;
+}
+.heart {
+  color: #ee0979;
+  font-size: 1.2em;
 }
